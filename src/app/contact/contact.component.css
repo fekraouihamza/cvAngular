@@ -1,0 +1,69 @@
+/*Contact*/
+input.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
+input.ng-valid{
+    border: 1px solid lightgray;
+}
+
+input.mot.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
+textarea.ng-touched.ng-invalid{
+    border: 1px solid red;
+}
+
+
+input.mot.ng-valid{
+    border: 1px solid lightgray;
+}
+
+#contact
+{
+    padding-top: 40px;
+}
+
+.red-divider
+{
+    width: 100px;
+    height:2px;
+    background: #fff;
+    margin: 20px auto;
+}
+
+
+
+#contact .heading h2
+{
+    color: antiquewhite;
+   text-align: center;
+   font-weight: bold;
+}
+
+
+#contact-form
+{
+    font-size: 20px;
+    background: #ddd;
+    padding: 40px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    
+}
+
+.blue
+{
+    color: #0069d6;
+}
+
+
+.fa-check-circle
+{
+    color: green;
+}
+
+
+

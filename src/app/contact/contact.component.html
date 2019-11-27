@@ -1,0 +1,86 @@
+    <section id="contact">
+      <div class="container">
+      <div class="red-divider"></div>
+      <div class="heading">
+         <h2>CONTACTEZ-MOI</h2>
+      </div>
+      <div class="red-divider"></div>
+    
+      <div class="modal fade" id="popup_mail_confirm">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body MailConfirm">
+              <button type="button" class="close btn-lg" data-dismiss="modal"><i class="fas fa-times"></i></button>
+              <h4><i class="fas fa-check-circle"></i> Votre message a bien été envoyé. Merci de m'avoir contacté</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <div class="row">
+        <div class="col-lg-10 offset-lg-1">
+             <form id="contact-form" [formGroup]= "contactForm" (ngSubmit)="onSubmit()">
+                 <div class="row">
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="firstname">Prénom<span class="blue">*</span></label>
+                            <input type="text" id="firstname" formControlName="firstname" class="form-control" placeholder="Votre prénom">
+                            <ng-container *ngIf="contactForm.get('firstname').touched">
+                              <span class="text-danger" *ngIf="contactForm.get('firstname').errors?.required">prénom obligatoire</span>
+                              <span class="text-danger mot" *ngIf="contactForm.get('firstname').errors?.pattern">Veuillez insérer un prénom valide.</span>
+                            </ng-container>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Nom<span class="blue">*</span></label>
+                            <input type="text" id="name" formControlName="name" class="form-control" placeholder="Votre nom">
+                            <ng-container *ngIf="contactForm.get('name').touched">
+                              <span class="text-danger" *ngIf="contactForm.get('name').errors?.required">nom obligatoire</span>
+                              <span class="text-danger mot" *ngIf="contactForm.get('name').errors?.pattern">Veuillez insérer un nom valide.</span>
+                            </ng-container>
+                        </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">Adresse email<span class="blue">*</span></label>
+                            <input type="text" id="email" formControlName="email" placeholder="Ex: admin@gmail.fr" class="form-control">
+                            <ng-container *ngIf="contactForm.get('email').touched">
+                              <span class="text-danger" *ngIf="contactForm.get('email').errors?.required">Email obligatoire</span>
+                              <span class="text-danger mot" *ngIf="contactForm.get('email').errors?.email">Veuillez insérer une adresse email valide.</span>
+                            </ng-container>
+                          </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input id="phone" type="tel" formControlName="phone" class="form-control" placeholder="Votre Téléphone">
+                            <ng-container *ngIf="contactForm.get('phone').touched">
+                                <span class="text-danger mot" *ngIf="contactForm.get('phone').errors?.pattern">Veuillez insérer un teléphone valide.</span>
+                              </ng-container>
+                          </div>
+                     </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="message">Message<span class="blue">*</span></label>
+                            <textarea id="message" formControlName="message" class="form-control" placeholder="Votre Message" rows="4"></textarea>
+                            <ng-container *ngIf="contactForm.get('message').touched">
+                              <span class="text-danger" *ngIf="contactForm.get('message').errors?.required">Message obligatoire</span>
+                              <span class="text-danger mot" *ngIf="contactForm.get('message').errors?.pattern">Veuillez insérer un message valide.</span>
+                            </ng-container>
+                        </div>
+                     </div>
+
+                     <div class="col-md-12">
+                         <p class="blue"><strong>* Ces informations sont requises.</strong></p>
+                     </div>
+                     <div class="mx-auto butt">
+                       <button class="btn btn-info" style="font-weight: bold; text-transform: uppercase" type="submit" [disabled]="contactForm.invalid">Envoyer</button>
+                     </div>
+                 </div>
+             </form>
+         </div>
+    </div>
+ </div>
+ </section>
+

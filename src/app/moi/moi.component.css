@@ -1,0 +1,55 @@
+/*moi*/
+
+h1,h2,h3,h4,h5,h6
+{
+    font-weight: bold;
+}
+#about
+{
+    padding-top: 30px;
+   
+}
+img
+  {
+      max-width: 100% !important;
+      height: auto !important;
+  }
+  
+.profile-picture
+{
+    text-align: center;
+    margin: 0 auto;
+    float: none;
+}
+
+.nom 
+{
+    color: antiquewhite !important;
+}
+
+.button1
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    color: antiquewhite;
+    border: 1px solid antiquewhite;
+    display: inline-block;
+    margin-top: 10px;
+    padding: 18px 20px;
+    border-radius: 3px;
+    transition: all 0.3s ease-in 0s;
+    background: transparent;
+
+}
+.button1:hover
+{
+    background: #fff;
+    color: darkslategray;
+    text-decoration: none;
+    
+}
+h2
+{
+    color: antiquewhite;
+}
+

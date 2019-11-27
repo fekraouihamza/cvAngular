@@ -1,0 +1,40 @@
+.navbar-brand
+{
+    font-weight: bold;
+    color: antiquewhite !important;
+    font-weight: bold !important;
+    
+}
+
+.navbar
+{
+    border-bottom: 1px solid antiquewhite;
+    background-color: #d82c2e;
+    font-weight: bold !important;
+}
+
+
+ul li a
+{
+    font-weight: bold;
+    color: antiquewhite !important;
+    transition: all 0.2s ease;
+}
+
+.nav-pills .nav-link.myActive,  .nav-pills .nav-link:hover{
+    color: #d82c2e !important;
+    background-color: #fff !important;
+}
+
+ul li a:hover
+{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 991px){
+    ul li a {
+        text-align: center !important;
+      }
+  }
+
+  
