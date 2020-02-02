@@ -13,14 +13,14 @@ export class ContactComponent implements OnInit {
   contactForm: FormGroup;
   mail = new Contact('','','','','');
   constructor(
-    private formBuilder: FormBuilder, 
+    private formBuilder: FormBuilder,
     private contactService: ContactService
-   
+
   ) { }
 
   ngOnInit() {
     this.initForm()
-   
+
   }
   initForm() {
     this.contactForm = this.formBuilder.group(
@@ -36,16 +36,16 @@ export class ContactComponent implements OnInit {
   onSubmit()
   {
    this.mail = this.contactForm.value;
-  
+
    this.contactService.createEmail(this.mail).subscribe(
      data => {
-     
-     if(data['isSuccess'] = true){
+
+     if( data['isSuccess'] = true ){
        console.log('okok');
        $('#popup_mail_confirm').modal('toggle');
        this.contactForm.reset();
      }
-     
+
    },
    error => {
     console.log("error is:", error);
@@ -54,5 +54,5 @@ export class ContactComponent implements OnInit {
   }
 
 
- 
+
 }

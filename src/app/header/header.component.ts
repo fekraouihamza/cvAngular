@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-  
+
   }
 
   onCollapse(){
@@ -30,6 +30,6 @@ export class HeaderComponent implements OnInit {
     this.onUnCollapse();
   }
 
-  
+
 
 }

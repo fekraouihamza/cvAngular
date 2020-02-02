@@ -4,7 +4,7 @@
 #skills
 {
     padding-top: 30px;
-   
+
 }
 .red-divider
 {
@@ -19,7 +19,7 @@
    color: antiquewhite;
    text-align: center;
    font-weight: bold;
-   
+
 }
 
 #skills .progress
@@ -28,7 +28,7 @@
     margin: 40px 20px;
     box-shadow: 0px 0px 1px;
     transition: all 0.2s ease;
-    
+
 }
 #skills .progress:hover
 {
@@ -39,13 +39,18 @@
 {
     height: 40px;
     background: rgb(117, 113, 113);
-    
+
 }
 
 #skills .progress h5
 {
-  
+
     color: antiquewhite;
     font-weight: bold;
-    
+
+}
+
+img:hover{
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
 }

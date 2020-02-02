@@ -10,7 +10,6 @@ export class ContactService {
 
 
   constructor(private http: HttpClient) { }
-  
 
   getContact() {
     return this.http.get<Contact>('http://localhost:8090/angularPhp/email.php');
